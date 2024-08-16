@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Final Practical Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ninja Jhala - 1147526</h1>
+        <div id="app">
+            <div class="fact-module">
+                <h2>Random Fact</h2>
+                <p>{{ randomFact }}</p>
+                <button @click="getRandomFact" style="background-color: rgb(251, 166, 244);">New Fact</button>
+            </div>
+            <div class="weather-module mt-4">
+                <h2>Weather</h2>
+                <p>Temperature: {{ weather.temperature }}</p>
+                <p>Wind: {{ weather.wind }}</p>
+                <p>Description: {{ weather.description }}</p>
+                <input type="text" v-model="city" placeholder="Enter city name" class="form-control">
+                <button @click="getWeather" style="background-color:  rgb(251, 166, 244);">Get Weather</button>
+            </div>
+
+            <div class="dictionary-module mt-4">
+                <h2>Dictionary</h2>
+                <p>Word: {{ definition.word }}</p>
+                <p>Phonetic: {{ definition.phonetic }}</p>
+                <p>Part of Speech: {{ definition.partOfSpeech }}</p>
+                <p>Definition: {{ definition.definition }}</p>
+                <input type="text" v-model="word" placeholder="Enter a word" class="form-control">
+                <button @click="getDefinition" style="background-color: rgb(251, 166, 244);">Define</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.37/dist/vue.global.prod.min.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

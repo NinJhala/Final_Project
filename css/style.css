@@ -1,0 +1,35 @@
+body {
+    padding-top: 20px;
+  
+    background-image: url('../images/image.jpeg');
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Fixes the background image in place when scrolling */
+}
+
+h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2::before{
+    color:darkblue;
+    content: "👉"; 
+}
+button {
+    margin-top: 10px;
+}
+@media (max-width: 600px) {
+    body {
+        font-size:x-small;
+        color:rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
+    }
+    h2{
+        color: ivory;
+    }
+    button{
+        background-color: hotpink;
+    }
+}
